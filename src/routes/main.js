@@ -4,6 +4,8 @@ const mainController = require('../controllers/main');
 const router = express.Router();
 
 router.get('/', mainController.home);
+router.get('/books/create', mainController.create);
+router.post('/books/create', mainController.createProcess);
 router.get('/books/detail/:id', mainController.bookDetail);
 router.get('/books/search', mainController.bookSearch);
 router.post('/books/search', mainController.bookSearchResult);
